@@ -51,11 +51,14 @@ const Game = () => {
   }, [running]);
 
   return (
-    <div>
+    <>
       <Grid grid={grid} toggleCell={toggleCell} />
-      <button onClick={() => setRunning(!running)}>{running ? 'Stop' : 'Start'}</button>
-      <button onClick={() => setGrid(Array(numRows).fill().map(() => Array(numCols).fill(false)))}>Clear</button>
-    </div>
+      <div className='game-button'>
+        <button onClick={() => setRunning(!running)}>{running ? 'Stop' : 'Start'}</button>
+        <button onClick={() => setGrid(Array(numRows).fill().map(() => Array(numCols).fill(false)))}>Clear</button>
+      </div>
+
+    </>
   );
 };
 

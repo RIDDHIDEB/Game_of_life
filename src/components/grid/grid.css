@@ -1,15 +1,21 @@
 .grid {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
   }
   
   .row {
     display: flex;
+    flex-wrap: wrap; 
   }
   
   .cell {
-    width: 20px;
-    height: 20px;
+    flex: 1 1 auto; 
+    min-width: 20px; 
+    min-height: 20px;
+    aspect-ratio: 1;
     border: 1px solid #ccc;
   }
   
@@ -20,3 +26,25 @@
   .cell.dead {
     background-color: white;
   }
+  
+  @media only screen and (min-width: 768px) {
+    .cell {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media only screen and (min-width: 540px) {
+    .cell {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+  @media only screen and (min-width: 380px) {
+    .cell {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  

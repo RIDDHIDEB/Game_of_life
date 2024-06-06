@@ -5,7 +5,11 @@ import Game from './components/game/game';
 function App() {
   return (
     <div className="App">
-      <Game/>
+      <div className='game-header'>
+        <h1>Game of Life</h1>
+      </div>
+
+      <Game />
     </div>
   );
 }
